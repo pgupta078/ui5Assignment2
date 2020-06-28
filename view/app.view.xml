@@ -1,0 +1,23 @@
+<mvc:View controllerName="search.INV.controller.app" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+	<!--<Text class="bluetext" text="Purchase order Report"/> -->
+	<!--curly braaces means value is dynamic - coming/from somewhere else -->
+	<!--<Input placeholder="{i18n>poNumber}" value="{/poInput/poNumber}" description="{i18n>poNumber} is {/poInput/poNumber} " valueLiveUpdate="true"/>-->
+	<!--<Input placeholder="{i18n>poType}" value="{/poInput/poType}" description="{i18n>poType} is {/poInput/poType} " valueLiveUpdate="true"/>-->
+	<!--<Input placeholder="{i18n>plant}" value="{/poInput/plant}" description="{i18n>plant} is {/poInput/plant} " valueLiveUpdate="true"/>-->
+	<!--<Input placeholder="{i18n>companyCode}" value="{/poInput/companyCode}" description="{i18n>companyCode} is {/poInput/companyCode} " valueLiveUpdate="true" />-->
+	<!--<Button-->
+	<!-- text = "{i18n>search}"-->
+	<!-- press =".onSearchPO"/> -->
+	<!-- shell brings spaces on both side   -->
+	<Shell>
+		<App>
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content >
+						<mvc:XMLView viewName="search.INV.view.view1"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

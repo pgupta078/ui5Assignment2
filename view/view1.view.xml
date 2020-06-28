@@ -1,0 +1,25 @@
+<mvc:View controllerName="search.INV.controller.view1" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.bluetext{ color:blue; } .myimage{float:right !important; width:150px; height:100px;} .mylogo{float:left !important; width:150px;
+		height:100px;}
+	</html:style>
+<!--	<Image class="myimage" src="http://www.sap.com/global/ui/images/global/sap-logo.png"/>
+		<Image src="search.INV/Images/Searchimage.jpg"/>  -->
+	<Image class="mylogo" src="Images/Searchimage.jpg"/>
+	<Text class="bluetext" text="Invoice Report"/>
+	<Input placeholder="{i18n>invNumber}" value="{/invInput/invNumber}" description="{i18n>invNumber} is {/invInput/invNumber} "
+		valueLiveUpdate="true" class="sapUiResponsiveMargin"/>
+	<Input class="sapUiResponsiveMargin" placeholder="{i18n>invType}" value="{/invInput/invType}"
+		description="{i18n>invType} is {/invInput/poType}" valueLiveUpdate="true"/>
+	<Input class="sapUiResponsiveMargin" placeholder="{i18n>companyCode}" value="{/invInput/companyCode}"
+		description="{i18n>companyCode} is {/invInput/companyCode}" valueLiveUpdate="true"/>
+	<Button class="sapUiResponsiveMargin" text="Search" press="onSearchInv"/>
+	<List headerText="{i18n>invList}" class="sapUiResponsiveMargin" width="auto" items="{inv>/Invoices}" id="invList">
+		<items>
+			<ObjectListItem title="{inv>Vbeln} - {inv>Type}"
+				number="{ parts: [{path: 'inv>Amount'}, {path: 'inv>/Waers'}], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: true } }"
+				numberUnit="{inv>/Waers}"/>
+		</items>
+	</List>
+</mvc:View>
+
